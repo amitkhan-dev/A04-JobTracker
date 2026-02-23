@@ -15,27 +15,128 @@
 <!--  font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#e9ecef]">
-  <header class="container mx-auto border border-amber-400 m-5">
+<body class="bg-[#e9ecef]">  <header class="container mx-auto m-5">
     <h2 class="  text-[32px] font-bold">Job Application Tracker</h2>
-    <div class="grid grid-cols-3 gap-4 my-6">
-      <div class="bg-amber-50 p-4 mx-3 rounded-lg">
+    <div class="grid grid-cols-3 gap-4 my-6 font-semibold">
+      <div class="bg-amber-50 p-4  rounded-lg">
         <p>Total</p>
-        <p class="text-2xl">0</p>
+        <p class=" total text-2xl">0</p>
       </div>
-      <div class="bg-amber-50 p-4 mx-3 rounded-lg">
-        <p>Total</p>
-        <p class="text-2xl text-green-500">0</p>
+      <div class="bg-amber-50 p-4  rounded-lg">
+        <p>Interview</p>
+        <p id="interviewCount" class="text-2xl text-green-500">0</p>
       </div>
-      <div class="bg-amber-50 p-4 mx-3 rounded-lg">
-        <p>Total</p>
-        <p class="text-2xl text-red-500">0</p>
+      <div class="bg-amber-50 p-4  rounded-lg">
+        <p>Rejected</p>
+        <p id="rejectedCount" class="text-2xl text-red-500">0</p>
       </div>
     </div>
   </header>
+
+  <hr class="container mx-auto border-[gray]">
   <main>
-    <section>
+    <section class="container mx-auto m-5">
+      <div class="flex justify-between mt-5 mb-4 ">
+        <div>
+          <h2 class="text-[20px] font-semibold">Available Jobs</h2>
+        </div>
+        <div class="flex gap-2 font-semibold">
+          <div>
+            <p class="total">0</p>
+          </div>
+          <div>
+            <p>jobs</p>
+          </div>
+        </div>
+      </div>
       
+      <div>
+        <div class=" flex gap-4">
+          <button class="bg-blue-600 text-white font-semibold px-4 py-3 rounded-lg">All</button>
+          <button class="bg-amber-50 font-semibold px-4 py-3 rounded-lg">Interview</button>
+          <button class="bg-amber-50 font-semibold px-4 py-3 rounded-lg">Rejected</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="allCards" class="container mx-auto ">
+      <!-- card-1 -->
+      <div class=" bg-amber-50 p-5 rounded-lg mb-5">
+        <div >
+          <div class=" justify-between flex mb-4">
+          <div>
+          <h3 class="text-[18px] font-semibold">Mobile First Corp</h3>
+          <p class="text-[#64748b]">React Native Developer</p>
+        </div>
+        <div id="delete-btn"><i class="fa-solid fa-trash-can"></i></div>
+      </div>
+      <div class="mb-4">
+        <p class="text-[#64748b]">Remote • Full-time • $130,000 - $175,000</p>
+      </div>
+      <div>
+        <div class="mb-4">
+          <p class="text-[#323b49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+        </div>
+        <div class="font-semibold flex gap-4">
+          <button id="interview-btn" class=" text-green-700 px-5 py-2 border-2 border-green-500 rounded-lg">INTERVIEW</button>
+          <button id="rejected-btn" class=" text-red-700 px-5 py-2 border-2 border-red-500 rounded-lg">REJECTED</button>
+        </div>
+      </div>
+    </div>
+      </div>
+      <!-- card 2 -->
+      <div class=" bg-amber-50 p-5 rounded-lg">
+        <div >
+          <div class=" justify-between flex mb-4">
+          <div>
+          <h3 class="text-[18px] font-semibold">WebFlow Agency</h3>
+          <p class="text-[#64748b]">Web Designer & Developer</p>
+        </div>
+        <div><i class="fa-solid fa-trash-can"></i></div>
+      </div>
+      <div class="mb-4">
+        <p class="text-[#64748b]">Los Angeles, CA• Part-time • $80,000 - $120,000</p>
+      </div>
+      <div>
+        <div class="mb-4">
+          <p class="text-[#323b49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+        </div>
+        <div class="font-semibold flex gap-4">
+          <button class=" text-green-700 px-5 py-2 border-2 border-green-500 rounded-lg">INTERVIEW</button>
+          <button class=" text-red-700 px-5 py-2 border-2 border-red-500 rounded-lg">REJECTED</button>
+        </div>
+      </div>
+    </div>
+      </div>
+      <!-- card 3 -->
+      <div class=" bg-amber-50 p-5 rounded-lg">
+        <div >
+          <div class=" justify-between flex mb-4">
+          <div>
+          <h3 class="text-[18px] font-semibold">WebFlow Agency</h3>
+          <p class="text-[#64748b]">Web Designer & Developer</p>
+        </div>
+        <div><i class="fa-solid fa-trash-can"></i></div>
+      </div>
+      <div class="mb-4">
+        <p class="text-[#64748b]">Los Angeles, CA• Part-time • $80,000 - $120,000</p>
+      </div>
+      <div>
+        <div class="mb-4">
+          <p class="text-[#323b49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+        </div>
+        <div class="font-semibold flex gap-4">
+          <button class=" text-green-700 px-5 py-2 border-2 border-green-500 rounded-lg">INTERVIEW</button>
+          <button class=" text-red-700 px-5 py-2 border-2 border-red-500 rounded-lg">REJECTED</button>
+        </div>
+      </div>
+    </div>
+      </div>
+      <!-- card 4 -->
+      <!-- card 5 -->
+      <!-- card 6 -->
+      <!-- card 7 -->
+      <!-- card 8 -->
     </section>
   </main>
   <script src="./script.js"></script>
