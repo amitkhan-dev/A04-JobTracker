@@ -33,7 +33,7 @@ let jobs = [
       type: "Austin, TX •Full-time•$110,000 - $150,000", 
       description: "Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.",
       status: "NOT APPLIED" },
-      
+
     { id: 6, 
       companyName: "MegaCorp Solutions", 
       position: "JavaScript Developer", 
@@ -149,6 +149,15 @@ function allJobs(jobsDisplay) {
         </div>
       </div>`;
   }
+}
+
+function updateStatus (id, newStatus) {
+    const jobIndex = jobs.findIndex(j => j.id === id);
+    if (jobIndex !== -1) {
+        jobs[jobIndex].status = newStatus; 
+        dashboard();
+        allJobs(jobs);
+    }
 }
 
 
