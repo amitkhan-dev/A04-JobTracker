@@ -160,6 +160,13 @@ function updateStatus (id, newStatus) {
     }
 }
 
+// delete btn
+function deleteBtn(id) {
+    jobs = jobs.filter(job => job.id !== id);
+    dashboard(); 
+    allJobs(jobs);
+}
+
 
 allJobs(jobs);
 dashboard();
