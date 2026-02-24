@@ -1,6 +1,7 @@
 // 
 let jobs = [
-    { id: 1, companyName: "Mobile First Corp",
+    { id: 1, 
+      companyName: "Mobile First Corp",
       position: "React Native Developer", 
       type: "Remote • Full-time• $130,000 - $175,000", 
       description: "Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.", 
@@ -160,15 +161,13 @@ function updateStatus (id, newStatus) {
     }
 }
 
- // delete btn
 function deleteBtn(id) {
     jobs = jobs.filter(job => job.id !== id);
     dashboard(); 
     allJobs(jobs);
     }
 
-function checkStatus(selectedStatus) {
-  // filter btn
+function toggling(selectedStatus) {
   const allFilterBtn = document.querySelectorAll('.filter-btn');
   
   for (let btn of allFilterBtn) {
@@ -176,7 +175,7 @@ function checkStatus(selectedStatus) {
     btn.classList.add('bg-white', 'text-gray-600');
   }
 
-  // Active btn - blue color
+
   const activeBtn = document.getElementById('btn-' + selectedStatus);
   if (activeBtn) {
     activeBtn.classList.add('bg-blue-600', 'text-white');
@@ -188,7 +187,7 @@ function checkStatus(selectedStatus) {
   if (selectedStatus === 'All') {
     data = jobs;
   } else {
-    //  check case sensetive 
+  
     for (let job of jobs) {
       if (job.status === selectedStatus.toUpperCase()) {
         data.push(job);
