@@ -160,6 +160,13 @@ function updateStatus (id, newStatus) {
     }
 }
 
+ // delete btn
+function deleteBtn(id) {
+    jobs = jobs.filter(job => job.id !== id);
+    dashboard(); 
+    allJobs(jobs);
+    }
+
 function checkStatus(selectedStatus) {
   // filter btn
   const allFilterBtn = document.querySelectorAll('.filter-btn');
@@ -175,15 +182,21 @@ function checkStatus(selectedStatus) {
     activeBtn.classList.add('bg-blue-600', 'text-white');
     activeBtn.classList.remove('bg-white', 'text-gray-600');
   }
-}
 
-// delete btn
-function deleteBtn(id) {
-    jobs = jobs.filter(job => job.id !== id);
-    dashboard(); 
-    allJobs(jobs);
+  let data = [];
+  
+  if (selectedStatus === 'All') {
+    data = jobs;
+  } else {
+    //  check case sensetive 
+    for (let job of jobs) {
+      if (job.status === selectedStatus.toUpperCase()) {
+        data.push(job);
+      }
+    }
+  }
+  allJobs(data);
 }
-
 
 allJobs(jobs);
 dashboard();
