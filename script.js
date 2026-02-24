@@ -61,7 +61,7 @@ function dashboard() {
   const totalJobs = document.getElementById('totalCount');
   const interviewJob = document.getElementById('interviewCount');
   const rejectedJob = document.getElementById('rejectedCount');
-  const availableJobsCount = document.getElementById('rightTotal'); 
+  const rightTotalCount = document.getElementById('rightTotal'); 
 
   let total = jobs.length; 
   let interviewCount = 0;
@@ -87,8 +87,8 @@ function dashboard() {
     rejectedJob.innerText = rejectedCount;
   } 
   
-  if(availableJobsCount) {
-      availableJobsCount.innerText = total;
+  if(rightTotalCount) {
+      rightTotalCount.innerText = total;
   }
 }
 
