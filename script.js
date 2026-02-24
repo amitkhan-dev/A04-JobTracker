@@ -160,6 +160,23 @@ function updateStatus (id, newStatus) {
     }
 }
 
+function checkStatus(selectedStatus) {
+  // filter btn
+  const allFilterBtn = document.querySelectorAll('.filter-btn');
+  
+  for (let btn of allFilterBtn) {
+    btn.classList.remove('bg-blue-600', 'text-white');
+    btn.classList.add('bg-white', 'text-gray-600');
+  }
+
+  // Active btn - blue color
+  const activeBtn = document.getElementById('btn-' + selectedStatus);
+  if (activeBtn) {
+    activeBtn.classList.add('bg-blue-600', 'text-white');
+    activeBtn.classList.remove('bg-white', 'text-gray-600');
+  }
+}
+
 // delete btn
 function deleteBtn(id) {
     jobs = jobs.filter(job => job.id !== id);
