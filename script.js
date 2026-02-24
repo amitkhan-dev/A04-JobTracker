@@ -5,12 +5,14 @@ let jobs = [
       type: "Remote • Full-time• $130,000 - $175,000", 
       description: "Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.", 
       status: "NOT APPLIED" },
+
     { id: 2, 
       companyName: "WebFlow Agency", 
       position: "Web Designer & Developer", 
       type: " Los Angeles, CA . Part-time . $80k - $120k", 
       description: "Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.", 
       status: "NOT APPLIED" },
+
     { id: 3, 
       companyName: "DataViz Solutions", 
       position: "Data Visualization Specialist", 
@@ -29,7 +31,9 @@ let jobs = [
       companyName: "Innovation Labs", 
       position: "UI/UX Engineer", 
       type: "Austin, TX •Full-time•$110,000 - $150,000", 
-      description: "Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.", status: "NOT APPLIED" },
+      description: "Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.",
+      status: "NOT APPLIED" },
+      
     { id: 6, 
       companyName: "MegaCorp Solutions", 
       position: "JavaScript Developer", 
@@ -38,7 +42,7 @@ let jobs = [
       status: "NOT APPLIED" },
 
     { id: 7, 
-      companyName: "StartupXYZ", 
+      companyName: "Startup XYZ", 
       position: "Full Stack Engineer", 
       type: "Remote•Full-time •$120,000 - $160,000", 
       description: "Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.", 
@@ -148,4 +152,5 @@ function allJobs(jobsDisplay) {
 }
 
 
+allJobs(jobs);
 dashboard();
